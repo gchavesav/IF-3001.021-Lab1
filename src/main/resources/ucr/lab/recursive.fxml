@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="648.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecursiveController">
+   <children>
+      <Pane prefHeight="74.0" prefWidth="660.0" style="-fx-background-color: #f7eadc;">
+         <children>
+            <Text layoutX="223.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recursive Test">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="74.0" prefHeight="247.0" prefWidth="660.0">
+         <children>
+            <TextArea fx:id="textArea" prefHeight="247.0" prefWidth="660.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="329.0" prefHeight="318.0" prefWidth="660.0">
+         <children>
+            <BarChart fx:id="barChart" layoutX="-2.0" layoutY="14.0" prefHeight="299.0" prefWidth="660.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

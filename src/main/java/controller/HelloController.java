@@ -1,11 +1,13 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Text;
 import ucr.lab.HelloApplication;
 
 import java.io.IOException;
@@ -17,6 +19,8 @@ public class HelloController {
     private BorderPane bp;
     @FXML
     private AnchorPane ap;
+    @FXML
+    private Text messageText;
 
     private void loadPage(String page){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
@@ -46,5 +50,12 @@ public class HelloController {
     @FXML
     void exit(ActionEvent event) {
         System.exit(0);
+    }
+
+    @FXML
+    public void exampleOnMousePressed(Event event) {
+        this.titleText.setText("");
+        this.messageText.setText("Loading Example Test. Please wait !!!");
+        this.bp.setCenter(ap);
     }
 }
